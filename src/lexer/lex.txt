@@ -1,0 +1,6 @@
+this is just stuff i am writing down as i learn about the process of this
+lexers and parsers are very similar
+the difference is that a lexer is parsing the code thgat someone writes
+so it takes what is basically plain text and makes it into a bunch of tokens
+the tokens are objects with properties that can hold data
+and because the tokens are now objects with properties and data it is much easier to separate them into logic
