@@ -16,6 +16,6 @@ namespace split {
             //methods
             //constructor
             explicit Lexer(std::string text); //header is just a shape file, so no body
-            std::vector<Token> reader(); //entry point method that does the work
+            std::vector<Token> lex(); //entry point method that does the work of the lexing
     };
 }

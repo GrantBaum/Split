@@ -1,0 +1,6 @@
+# a comment line
+# not at all what syntax will look like btw
+
+read csv "sales.csv"
+where $2 >= 100 and name contains "widget"
+print $1, price * 2
