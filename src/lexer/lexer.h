@@ -12,6 +12,30 @@ namespace split {
             std::string text_; //the actual text of the script
             size_t pos_ = 0; //position (where in the text)
             int line_ = 1; //what line im on, not nessecary but i want it
+
+            //some helper methods for lexing
+            bool atEnd() const {
+                if(pos_ >= text_.size()){
+                    return true;
+                }
+                else return false;
+            }
+            //look at current char WITHOUT MOVING
+            char peek() const {
+                if(atEnd()){
+                    return '\0';
+                }
+                else {
+                    return text_[pos_];
+                }
+            }
+            //look at current char and then step forward, in that order
+            char advance() {
+                char temp = peek();
+                pos_++;
+                return temp;
+            }
+            
         public:
             //methods
             //constructor
