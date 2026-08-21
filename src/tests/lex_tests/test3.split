@@ -1,0 +1,39 @@
+# lexer test — every token type, valid input only
+# this line and the next are comments; neither should produce tokens
+#no space after the hash
+
+read csv "sales.csv"
+
+# identifiers vs keywords
+price name region total_2 _hidden endpoint android
+end begin where print if else and or not read csv tsv lines
+
+# numbers
+0 7 100 3.5 0.25 12.75 900000 3.
+
+# fields, single and multi digit
+$1 $2 $7 $12 $100
+
+# strings
+"hello"
+""
+"has spaces and, punctuation!"
+"tabs	inside"
+"$2 and where and 100 are all just text in here"
+
+# two-char operators — must be ONE token each
+>= <= == !=
+
+# single-char operators
+> < = + - * / % , { } ( )
+
+# operators packed with no spaces
+price>=100
+$2+$3
+total=count*2
+
+# a realistic line
+where price >= 100 and region == "MW" { print $1, name, price * 2 }
+
+# no trailing newline on the next line
+print total

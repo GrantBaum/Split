@@ -29,6 +29,10 @@ namespace split {
                     return text_[pos_];
                 }
             }
+            //look at the char one ahead of current position
+            char peekNext() const {
+                //implement
+            }
             //look at current char and then step forward, in that order
             char advance() {
                 char temp = peek();

@@ -34,7 +34,7 @@ int main(int argc, char* argv[]){
     
     //loop the tokens and print their type and whats in the text instance var
     for (const auto& t : tokens){
-        std::cout << split::tokName(t.type) + t.text << std::endl;
+        std::cout << split::tokName(t.type) + " [" + t.text + "] " << std::endl;
     }
     return 0;
 
